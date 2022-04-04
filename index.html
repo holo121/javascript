@@ -7,19 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
+    <p>salam donya</p>
+    <p>new text</p>
+    <p>php</p>
+    <p>javascript</p>
+    <p>c#</p>
+
     <script>
-        let validEmail = true;
-        let validPassword = false;
+        const paragraphs = document.querySelectorAll('p');
 
-        if (validEmail && validPassword) {
+        paragraphs.forEach(function (item) {
+            if (item.textContent.includes('php')) {
+                item.style.color = 'red';
+            }
+        }
+        );
 
-            console.log('welcome admin')
-        }
-        else if (validEmail || validPassword) {
-            console.log('welcome user')
-        }
     </script>
 </body>
 
